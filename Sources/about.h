@@ -43,9 +43,6 @@ protected:
 	void GoUrl(UINT id);
 
 	acWindow::CStatic urlAngelCode;
-	acWindow::CStatic urlLibPng;
-	acWindow::CStatic urlLibJpeg;
-	acWindow::CStatic urlZLib;
 	acWindow::CStatic urlSquish;
 };
 

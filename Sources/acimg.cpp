@@ -171,16 +171,10 @@ int LoadImageFile(const char *filename, Image &img)
 	if( ext == 0 )
 		return E_INVALID_ARG;
 
-	if( _stricmp(ext, ".jpg") == 0 )
-		return LoadJpg(filename, img);
-	else if( _stricmp(ext, ".bmp") == 0 )
-		return LoadBmp(filename, img);
-	else if( _stricmp(ext, ".tga") == 0 )
+	if( _stricmp(ext, ".tga") == 0 )
 		return LoadTga(filename, img);
-	else if( _stricmp(ext, ".dds") == 0 )
+	else
 		return LoadDds(filename, img);
-	else if( _stricmp(ext, ".png") == 0 )
-		return LoadPng(filename, img);
 
 	return E_FORMAT_NOT_SUPPORTED;
 }

@@ -254,9 +254,8 @@ void CExportDlg::OnInit()
 	CheckDlgButton(hWnd, IDC_DESC_BIN,  fontDescFormat == 2 ? BST_CHECKED : BST_UNCHECKED);
 
 	// Fill in the texture file format combo
+	SendDlgItemMessage(hWnd, IDC_TEXTURE_FMT, CB_ADDSTRING, 0, (LPARAM)__TEXT("tga - Truevision TGA"));
 	SendDlgItemMessage(hWnd, IDC_TEXTURE_FMT, CB_ADDSTRING, 0, (LPARAM)__TEXT("dds - DirectDraw Surface"));
-	SendDlgItemMessage(hWnd, IDC_TEXTURE_FMT, CB_ADDSTRING, 0, (LPARAM)__TEXT("png - Portable Network Graphics"));
-	SendDlgItemMessage(hWnd, IDC_TEXTURE_FMT, CB_ADDSTRING, 0, (LPARAM)__TEXT("tga - Targa"));
 	ConvertUtf8ToTChar(textureFormat, buf, 256);
 	SendDlgItemMessage(hWnd, IDC_TEXTURE_FMT, CB_SELECTSTRING, -1, (LPARAM)buf);
 	OnTextureChange();
@@ -314,10 +313,6 @@ void CExportDlg::OnTextureChange()
 		SendDlgItemMessage(hWnd, IDC_TEXTURE_COMPRESSION, CB_ADDSTRING, 0, (LPARAM)__TEXT("None"));
 		SendDlgItemMessage(hWnd, IDC_TEXTURE_COMPRESSION, CB_ADDSTRING, 0, (LPARAM)__TEXT("Run-length encoded"));
 	}
-	else if( textureFormat == "png" )
-	{
-		SendDlgItemMessage(hWnd, IDC_TEXTURE_COMPRESSION, CB_ADDSTRING, 0, (LPARAM)__TEXT("Deflate"));
-	}
 	else if( textureFormat == "dds" )
 	{
 		SendDlgItemMessage(hWnd, IDC_TEXTURE_COMPRESSION, CB_ADDSTRING, 0, (LPARAM)__TEXT("None"));
@@ -348,7 +343,7 @@ void CExportDlg::GetOptions()
 	string tmp;
 	GetDlgItemText(hWnd, IDC_ADAPTIVEPADFACTOR, buf, 256);
 	ConvertTCharToUtf8(buf, tmp);
-	sscanf(tmp.c_str(), "%f", &adaptivePaddingFactor);
+	sscanf_s(tmp.c_str(), "%f", &adaptivePaddingFactor);
 
 	// Output texture
 	width = GetDlgItemInt(hWnd, IDC_WIDTH, 0, FALSE);

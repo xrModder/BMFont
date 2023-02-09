@@ -2612,9 +2612,7 @@ int CFontGen::SaveFont(const char *szFile)
 
 		if( textureFormat == "tga" )
 			acImage::SaveTga(str.c_str(), image, textureCompression ? acImage::TGA_RLE : 0);
-		else if( textureFormat == "png" )
-			acImage::SavePng(str.c_str(), image);
-		else if( textureFormat == "dds" )
+		else
 			acImage::SaveDds(str.c_str(), image, textureCompression);
 	}
 
@@ -2909,10 +2907,6 @@ int CFontGen::LoadConfiguration(const char *filename)
 	{
 		if( _textureCompression < 0 ) _textureCompression = 0;
 		if( _textureCompression > 1 ) _textureCompression = 1;
-	}
-	else if( _textureFormat == "png" )
-	{
-		_textureCompression = 0;
 	}
 	else if( _textureFormat == "dds" )
 	{

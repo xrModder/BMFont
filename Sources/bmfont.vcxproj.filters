@@ -3,15 +3,15 @@
   <ItemGroup>
     <Filter Include="Source Files">
       <UniqueIdentifier>{da9dd151-978f-4828-9408-6e7e690bb89b}</UniqueIdentifier>
-      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{e54ddb9b-3064-45c9-9a87-e91d16835637}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{bd82e2af-6cb9-4927-9c6d-e40b8791b129}</UniqueIdentifier>
-      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -27,16 +27,7 @@
     <ClCompile Include="acimg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="acimg_bmp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="acimg_dds.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="acimg_jpg.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="acimg_png.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="acimg_tga.cpp">
@@ -110,9 +101,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="imagemgr.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="about.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -179,6 +167,9 @@
     <ClInclude Include="iconimagedlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="imagemgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="imagewnd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -198,10 +189,10 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="icon1.ico">
+    <None Include="resources\check.bmp">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="stateimages.bmp">
+    <None Include="resources\icon.ico">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

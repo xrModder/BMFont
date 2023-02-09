@@ -80,7 +80,7 @@ void CIconImageDlg::OnBrowse()
 {
 	CFileDialog dlg;
 	dlg.AddFilter("All files (*.*)", "*.*");
-	dlg.AddFilter("Supported image files (*.bmp;*.jpg;*.tga;*.dds;*.png)", "*.bmp;*.jpg;*.tga;*.dds;*.png", true);
+	dlg.AddFilter("Supported image files (*.tga; *.dds;)", "*.tga; *.dds;", true);
 
 	if( dlg.AskForOpenFileName(this) )
 	{

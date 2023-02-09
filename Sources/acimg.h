@@ -70,14 +70,6 @@ const DWORD TGA_RLE = 1;
 int SaveTga(const char *filename, Image &image, DWORD flags = 0);
 int LoadTga(const char *filename, Image &image);
 
-// BMP
-int SaveBmp(const char *filename, Image &image);
-int LoadBmp(const char *filename, Image &image);
-
-// PNG
-int SavePng(const char *filename, Image &image);
-int LoadPng(const char *filename, Image &image);
-
 // DDS
 const DWORD DDS_DXT1 = 1;
 const DWORD DDS_DXT3 = 2;
@@ -85,11 +77,6 @@ const DWORD DDS_DXT5 = 3;
 
 int SaveDds(const char *filename, Image &image, DWORD flags = 0);
 int LoadDds(const char *filename, Image &image);
-
-// JPG
-// Flags is the quality, from 0 to 100
-int SaveJpg(const char *filename, Image &image, DWORD flags = 50);
-int LoadJpg(const char *filename, Image &image);
 
 // Helpers
 int LoadImageFile(const char *filename, Image &image);

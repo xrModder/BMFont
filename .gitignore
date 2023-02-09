@@ -1,0 +1,4 @@
+# Ignore user folders and files
+.vs/
+Binaries/
+*.vcxproj.user

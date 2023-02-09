@@ -236,7 +236,7 @@ void CCharWin::UpdateSubsetsSelection()
 
 string CCharWin::GetDefaultConfig()
 {
-	return acUtility::GetApplicationPath() + "bmfont.bmfc";
+	return acUtility::GetApplicationPath() + "BMFont.bmfc";
 }
 
 int CCharWin::Create(int width, int height, const string &configFile)

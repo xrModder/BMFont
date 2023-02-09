@@ -48,14 +48,8 @@ LRESULT CAbout::MsgProc(UINT msg, WPARAM wParam, LPARAM lParam)
 	{
 	case WM_INITDIALOG:
 		urlAngelCode.Subclass(GetDlgItem(hWnd, IDC_URL1));
-		urlLibPng.Subclass(GetDlgItem(hWnd, IDC_URL_LIBPNG));
-		urlLibJpeg.Subclass(GetDlgItem(hWnd, IDC_LIBJPEG));
-		urlZLib.Subclass(GetDlgItem(hWnd, IDC_URL_ZLIB));
 		urlSquish.Subclass(GetDlgItem(hWnd, IDC_SQUISH));
 		urlAngelCode.MakeUrl("http://www.angelcode.com");
-		urlLibPng.MakeUrl("http://www.libpng.org");
-		urlLibJpeg.MakeUrl("http://www.ijg.org");
-		urlZLib.MakeUrl("http://www.zlib.net");
 		urlSquish.MakeUrl("http://sourceforge.net/projects/libsquish/");
 		break;
 
