@@ -91,6 +91,5 @@
     <None Include="singlecolourlookup.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="texture_compression_s3tc.txt" />
   </ItemGroup>
 </Project>
