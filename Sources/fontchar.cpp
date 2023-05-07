@@ -1,6 +1,6 @@
 /*
    AngelCode Bitmap Font Generator
-   Copyright (c) 2004-2017 Andreas Jonsson
+   Copyright (c) 2004-2023 Andreas Jonsson
   
    This software is provided 'as-is', without any express or implied 
    warranty. In no event will the authors be held liable for any 
@@ -531,14 +531,14 @@ int CFontChar::DrawGlyphFromBitmap(HDC dc, int ch, int fontHeight, int fontAscen
 		}
 		else
 		{
-			if( GetCharABCWidths(dc, ch, ch, &abc) )
+			if( GetCharABCWidthsA(dc, ch, ch, &abc) )
 			{
 				m_width = int(abc.abcB);
 			}
 			else
 			{
 				// Use GetCharWidth32() instead
-				GetCharWidth32(dc, ch, ch, &m_width);
+				GetCharWidth32A(dc, ch, ch, &m_width);
 
 				abc.abcA = abc.abcC = 0;
 				abc.abcB = (unsigned)m_width;

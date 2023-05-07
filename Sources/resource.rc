@@ -159,7 +159,7 @@ FONT 8, "MS Sans Serif", 0, 0, 0
 {
     DEFPUSHBUTTON   "OK", IDOK, 68, 137, 50, 14, 0, WS_EX_LEFT
     LTEXT           "Bitmap Font Generator", IDC_STATIC, 57, 7, 72, 8, SS_LEFT, WS_EX_LEFT
-    CTEXT           "v1.14a", IDC_STATIC, 73, 16, 39, 8, NOT WS_GROUP | SS_CENTER, WS_EX_LEFT
+    CTEXT           "v1.14b", IDC_STATIC, 73, 16, 39, 8, NOT WS_GROUP | SS_CENTER, WS_EX_LEFT
     LTEXT           "Copyright 2004-2023 Andreas Jonsson", IDC_STATIC, 32, 53, 122, 8, SS_LEFT, WS_EX_LEFT
     LTEXT           "www.AngelCode.com", IDC_URL1, 58, 77, 69, 8, SS_LEFT | SS_NOTIFY, WS_EX_LEFT
     LTEXT           "All rights reserved", IDC_STATIC, 65, 63, 56, 8, SS_LEFT, WS_EX_LEFT

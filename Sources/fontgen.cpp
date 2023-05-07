@@ -1166,10 +1166,10 @@ void CFontGen::DetermineExistingChars()
 	{
 		numCharsAvailable = 0;
 		numCharsSelected = 0;
+		ClearSubsets();
 
 		if( useUnicode )
 		{
-			ClearSubsets();
 			memset(disabled, 1, (maxUnicodeChar+1)*sizeof(bool));
 
 			// GetGlyphIndices doesn't support surrogate pairs
@@ -2986,6 +2986,11 @@ int CFontGen::GetNumFailedChars()
 	return numFailed;
 }
 
+// TODO: Can the GSUB table in the true type font be used to also select ligature glyps 
+//       when the bytes in the text form words that need this (e.g. Arabic text)?
+//       ref: https://learn.microsoft.com/en-us/typography/opentype/spec/gsub
+//       If this is used then the generated font file should also contain the ligatures 
+//       to allow the program that will write with the bitmap font to do the same replacement
 int CFontGen::SelectCharsFromFile(const char *filename)
 {
 	if( isWorking ) return -1;
